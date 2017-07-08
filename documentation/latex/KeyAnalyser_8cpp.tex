@@ -1,0 +1,34 @@
+\hypertarget{KeyAnalyser_8cpp}{}\section{sources/\+Key\+Analyser.cpp File Reference}
+\label{KeyAnalyser_8cpp}\index{sources/\+Key\+Analyser.\+cpp@{sources/\+Key\+Analyser.\+cpp}}
+{\ttfamily \#include $<$Poly\+Crack.\+hpp$>$}\newline
+{\ttfamily \#include $<$Frequency.\+hpp$>$}\newline
+{\ttfamily \#include $<$File\+Manager.\+hpp$>$}\newline
+{\ttfamily \#include $<$Key\+Analyser.\+hpp$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{KeyAnalyser_8cpp_aa4729260b732666338dee7d841aa12f3}\label{KeyAnalyser_8cpp_aa4729260b732666338dee7d841aa12f3}} 
+\#define {\bfseries KP}~0.\+067
+\item 
+\mbox{\Hypertarget{KeyAnalyser_8cpp_a76f9425f5a9151312ae472a45a03b60c}\label{KeyAnalyser_8cpp_a76f9425f5a9151312ae472a45a03b60c}} 
+\#define {\bfseries KR}~0.\+0385
+\item 
+\mbox{\Hypertarget{KeyAnalyser_8cpp_ac4cf4b2ab929bd23951a8676eeac086b}\label{KeyAnalyser_8cpp_ac4cf4b2ab929bd23951a8676eeac086b}} 
+\#define {\bfseries C}~26
+\item 
+\mbox{\Hypertarget{KeyAnalyser_8cpp_a05631a36f382242d1f52d5e9fe06735e}\label{KeyAnalyser_8cpp_a05631a36f382242d1f52d5e9fe06735e}} 
+\#define {\bfseries A\+L\+P\+H\+A\+B\+ET}~\char`\"{}A\+B\+C\+D\+E\+F\+G\+H\+I\+J\+K\+L\+M\+N\+O\+P\+Q\+R\+S\+T\+U\+V\+W\+X\+YZ\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Leo Sleet
+\end{DoxyAuthor}
+Includes multiple classes for determining the key length of a given cipher text. Once the key size is known, the cipher text can be broken down into monoalphabetic ciphers which can either be bruteforced or frequency attacked. 

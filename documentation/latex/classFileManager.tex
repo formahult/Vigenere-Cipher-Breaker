@@ -1,0 +1,94 @@
+\hypertarget{classFileManager}{}\section{File\+Manager Class Reference}
+\label{classFileManager}\index{File\+Manager@{File\+Manager}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFileManager_a40ecb9b4c441c5108e25814d8d40824a}{File\+Manager} (string)
+\item 
+\hyperlink{classFileManager_abaed33b5b0c13b8a597db9335a1aacfa}{$\sim$\+File\+Manager} ()
+\item 
+\mbox{\Hypertarget{classFileManager_ab424d7f507a8804d7b8b8557fe481f46}\label{classFileManager_ab424d7f507a8804d7b8b8557fe481f46}} 
+bool {\bfseries is\+\_\+open} ()
+\item 
+list$<$ string $>$ \hyperlink{classFileManager_abd1d0f98cb32a54435e491f876f73d14}{parse\+Lines} ()
+\item 
+int \hyperlink{classFileManager_a2ad30e54df4ffd2ca94b316ef43e1b1f}{save\+Lines} (list$<$ string $>$)
+\item 
+map$<$ char, double $>$ \hyperlink{classFileManager_afb8f7a73be3a7392fc822253aa554531}{parse\+Frequencies} ()
+\item 
+string \hyperlink{classFileManager_a92cce9f1145aaa39a52f4b991850d741}{text\+Only} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFileManager_a40ecb9b4c441c5108e25814d8d40824a}\label{classFileManager_a40ecb9b4c441c5108e25814d8d40824a}} 
+\index{File\+Manager@{File\+Manager}!File\+Manager@{File\+Manager}}
+\index{File\+Manager@{File\+Manager}!File\+Manager@{File\+Manager}}
+\subsubsection{\texorpdfstring{File\+Manager()}{FileManager()}}
+{\footnotesize\ttfamily File\+Manager\+::\+File\+Manager (\begin{DoxyParamCaption}\item[{string}]{file\+Name }\end{DoxyParamCaption})}
+
+Constructor to safely open a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & U\+RI to file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFileManager_abaed33b5b0c13b8a597db9335a1aacfa}\label{classFileManager_abaed33b5b0c13b8a597db9335a1aacfa}} 
+\index{File\+Manager@{File\+Manager}!````~File\+Manager@{$\sim$\+File\+Manager}}
+\index{````~File\+Manager@{$\sim$\+File\+Manager}!File\+Manager@{File\+Manager}}
+\subsubsection{\texorpdfstring{$\sim$\+File\+Manager()}{~FileManager()}}
+{\footnotesize\ttfamily File\+Manager\+::$\sim$\+File\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor ensures that the file is safely closed. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classFileManager_afb8f7a73be3a7392fc822253aa554531}\label{classFileManager_afb8f7a73be3a7392fc822253aa554531}} 
+\index{File\+Manager@{File\+Manager}!parse\+Frequencies@{parse\+Frequencies}}
+\index{parse\+Frequencies@{parse\+Frequencies}!File\+Manager@{File\+Manager}}
+\subsubsection{\texorpdfstring{parse\+Frequencies()}{parseFrequencies()}}
+{\footnotesize\ttfamily map$<$ char, double $>$ File\+Manager\+::parse\+Frequencies (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+a map of chars and the recorded frequencies. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFileManager_abd1d0f98cb32a54435e491f876f73d14}\label{classFileManager_abd1d0f98cb32a54435e491f876f73d14}} 
+\index{File\+Manager@{File\+Manager}!parse\+Lines@{parse\+Lines}}
+\index{parse\+Lines@{parse\+Lines}!File\+Manager@{File\+Manager}}
+\subsubsection{\texorpdfstring{parse\+Lines()}{parseLines()}}
+{\footnotesize\ttfamily list$<$ string $>$ File\+Manager\+::parse\+Lines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+The file\textquotesingle{}s lines as a list of strings. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFileManager_a2ad30e54df4ffd2ca94b316ef43e1b1f}\label{classFileManager_a2ad30e54df4ffd2ca94b316ef43e1b1f}} 
+\index{File\+Manager@{File\+Manager}!save\+Lines@{save\+Lines}}
+\index{save\+Lines@{save\+Lines}!File\+Manager@{File\+Manager}}
+\subsubsection{\texorpdfstring{save\+Lines()}{saveLines()}}
+{\footnotesize\ttfamily int File\+Manager\+::save\+Lines (\begin{DoxyParamCaption}\item[{list$<$ string $>$}]{lines }\end{DoxyParamCaption})}
+
+Writes out a list of strings each on a new line.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lines} & List of string to write. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+count of lines saved. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFileManager_a92cce9f1145aaa39a52f4b991850d741}\label{classFileManager_a92cce9f1145aaa39a52f4b991850d741}} 
+\index{File\+Manager@{File\+Manager}!text\+Only@{text\+Only}}
+\index{text\+Only@{text\+Only}!File\+Manager@{File\+Manager}}
+\subsubsection{\texorpdfstring{text\+Only()}{textOnly()}}
+{\footnotesize\ttfamily string File\+Manager\+::text\+Only (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+The file\textquotesingle{}s lines as a single cleaned string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\hyperlink{FileManager_8hpp}{File\+Manager.\+hpp}\item 
+sources/File\+Manager.\+cpp\end{DoxyCompactItemize}

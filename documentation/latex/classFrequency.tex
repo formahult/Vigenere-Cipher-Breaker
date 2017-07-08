@@ -1,0 +1,107 @@
+\hypertarget{classFrequency}{}\section{Frequency Class Reference}
+\label{classFrequency}\index{Frequency@{Frequency}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFrequency_aee3a222d9a2c90ed28f3e08c20a661f3}{Frequency} (map$<$ char, double $>$, int)
+\item 
+\mbox{\Hypertarget{classFrequency_a39b7092591845fc4d32c51849c8b69cc}\label{classFrequency_a39b7092591845fc4d32c51849c8b69cc}} 
+map$<$ char, double $>$ {\bfseries get\+Symbol\+Frequency} ()
+\item 
+\mbox{\Hypertarget{classFrequency_aebdcb9e2e49f7ecfb29c0ffb287eb8d2}\label{classFrequency_aebdcb9e2e49f7ecfb29c0ffb287eb8d2}} 
+double {\bfseries get\+Symbol\+Frequency} (char)
+\item 
+\hyperlink{classRelFrequency}{Rel\+Frequency} \hyperlink{classFrequency_ad26f1ea2a3952447a6188d73cd26ca16}{get\+Relative\+Frequency} ()
+\item 
+\mbox{\Hypertarget{classFrequency_a4a55e109f83877daf7c4594f7a876d3f}\label{classFrequency_a4a55e109f83877daf7c4594f7a876d3f}} 
+void {\bfseries print\+Frequencies} ()
+\item 
+\mbox{\Hypertarget{classFrequency_a76eb9ce63ed4658fbf6888e29414eb02}\label{classFrequency_a76eb9ce63ed4658fbf6888e29414eb02}} 
+double {\bfseries compare} (\hyperlink{classFrequency}{Frequency})
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classFrequency}{Frequency} \hyperlink{classFrequency_afa743a740aba09aa200406693c11afe8}{Frequency\+From\+C\+SV} (string)
+\item 
+static \hyperlink{classFrequency}{Frequency} \hyperlink{classFrequency_a1f7df4dabf9cdf839f9884ee844c6752}{Frequency\+From\+String} (string)
+\item 
+static \hyperlink{classFrequency}{Frequency} \hyperlink{classFrequency_ae46fea585785720e124b45643914f4c6}{Frequency\+From\+File} (string)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFrequency_aee3a222d9a2c90ed28f3e08c20a661f3}\label{classFrequency_aee3a222d9a2c90ed28f3e08c20a661f3}} 
+\index{Frequency@{Frequency}!Frequency@{Frequency}}
+\index{Frequency@{Frequency}!Frequency@{Frequency}}
+\subsubsection{\texorpdfstring{Frequency()}{Frequency()}}
+{\footnotesize\ttfamily Frequency\+::\+Frequency (\begin{DoxyParamCaption}\item[{map$<$ char, double $>$}]{F,  }\item[{int}]{T }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em F} & Map between characters and their frequencies \\
+\hline
+{\em T} & Total characters in text \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classFrequency_afa743a740aba09aa200406693c11afe8}\label{classFrequency_afa743a740aba09aa200406693c11afe8}} 
+\index{Frequency@{Frequency}!Frequency\+From\+C\+SV@{Frequency\+From\+C\+SV}}
+\index{Frequency\+From\+C\+SV@{Frequency\+From\+C\+SV}!Frequency@{Frequency}}
+\subsubsection{\texorpdfstring{Frequency\+From\+C\+S\+V()}{FrequencyFromCSV()}}
+{\footnotesize\ttfamily \hyperlink{classFrequency}{Frequency} Frequency\+::\+Frequency\+From\+C\+SV (\begin{DoxyParamCaption}\item[{string}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Loads a previously saved frequency from a C\+SV file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & U\+RI of file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFrequency_ae46fea585785720e124b45643914f4c6}\label{classFrequency_ae46fea585785720e124b45643914f4c6}} 
+\index{Frequency@{Frequency}!Frequency\+From\+File@{Frequency\+From\+File}}
+\index{Frequency\+From\+File@{Frequency\+From\+File}!Frequency@{Frequency}}
+\subsubsection{\texorpdfstring{Frequency\+From\+File()}{FrequencyFromFile()}}
+{\footnotesize\ttfamily \hyperlink{classFrequency}{Frequency} Frequency\+::\+Frequency\+From\+File (\begin{DoxyParamCaption}\item[{string}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Read a file and counts symbol frequencies.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & U\+RI of file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFrequency_a1f7df4dabf9cdf839f9884ee844c6752}\label{classFrequency_a1f7df4dabf9cdf839f9884ee844c6752}} 
+\index{Frequency@{Frequency}!Frequency\+From\+String@{Frequency\+From\+String}}
+\index{Frequency\+From\+String@{Frequency\+From\+String}!Frequency@{Frequency}}
+\subsubsection{\texorpdfstring{Frequency\+From\+String()}{FrequencyFromString()}}
+{\footnotesize\ttfamily \hyperlink{classFrequency}{Frequency} Frequency\+::\+Frequency\+From\+String (\begin{DoxyParamCaption}\item[{string}]{cipher\+Text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Named constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em cipher\+Text} & String of text to analyse for symbol frequencies \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFrequency_ad26f1ea2a3952447a6188d73cd26ca16}\label{classFrequency_ad26f1ea2a3952447a6188d73cd26ca16}} 
+\index{Frequency@{Frequency}!get\+Relative\+Frequency@{get\+Relative\+Frequency}}
+\index{get\+Relative\+Frequency@{get\+Relative\+Frequency}!Frequency@{Frequency}}
+\subsubsection{\texorpdfstring{get\+Relative\+Frequency()}{getRelativeFrequency()}}
+{\footnotesize\ttfamily \hyperlink{classRelFrequency}{Rel\+Frequency} Frequency\+::get\+Relative\+Frequency (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Turns an absolute frequency set into it\textquotesingle{}s relative representation
+
+\begin{DoxyReturn}{Returns}
+A \hyperlink{classRelFrequency}{Rel\+Frequency} object 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\hyperlink{Frequency_8hpp}{Frequency.\+hpp}\item 
+sources/\hyperlink{Frequency_8cpp}{Frequency.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,115 @@
+\hypertarget{main_8cpp}{}\section{sources/main.cpp File Reference}
+\label{main_8cpp}\index{sources/main.\+cpp@{sources/main.\+cpp}}
+{\ttfamily \#include \char`\"{}Poly\+Crack.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}optionparser.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$Vigenere.\+hpp$>$}\newline
+{\ttfamily \#include $<$Key\+Analyser.\+hpp$>$}\newline
+{\ttfamily \#include $<$Frequency.\+hpp$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structArg}{Arg}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8cpp_aebb391f83c0942d90b83aefff143d1f0}\label{main_8cpp_aebb391f83c0942d90b83aefff143d1f0}} 
+enum {\bfseries Option\+Index} \{ \newline
+{\bfseries U\+N\+K\+N\+O\+WN}, 
+{\bfseries H\+E\+LP}, 
+{\bfseries M\+O\+DE}, 
+{\bfseries F\+I\+L\+E\+IN}, 
+\newline
+{\bfseries F\+I\+L\+E\+O\+UT}, 
+{\bfseries K\+E\+Y\+L\+EN}, 
+{\bfseries D\+I\+CT}, 
+{\bfseries C\+R\+IB}
+ \}
+\item 
+\mbox{\Hypertarget{main_8cpp_a976bded296a67e09242af85291a639d6}\label{main_8cpp_a976bded296a67e09242af85291a639d6}} 
+enum {\bfseries Option\+Type} \{ \newline
+{\bfseries K\+A\+N\+AL}, 
+{\bfseries F\+A\+N\+AL}, 
+{\bfseries E\+N\+C\+R\+Y\+PT}, 
+{\bfseries D\+E\+C\+R\+Y\+PT}, 
+\newline
+{\bfseries K\+E\+L\+IM}, 
+{\bfseries F\+Q\+A\+N\+AL}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}\label{main_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}} 
+int {\bfseries main} (int argc, char const $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{structoption_1_1Descriptor}{option\+::\+Descriptor} {\bfseries usage} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Leo Sleet
+\end{DoxyAuthor}
+Main body of polycrack.
+
+Accepts arguments and returns appropriate outputs.
+
+Compiling using make and running ./polycrack --help provides usage instructions.
+
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Leo Sleet Compile\+: g++ -\/std=gnu++11 -\/\+Wall -\/\+Werror -\/pendantic 
+\end{DoxyAuthor}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{main_8cpp_af23d8c13133fbc8715f459529590ed12}\label{main_8cpp_af23d8c13133fbc8715f459529590ed12}} 
+\index{main.\+cpp@{main.\+cpp}!usage@{usage}}
+\index{usage@{usage}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{usage}{usage}}
+{\footnotesize\ttfamily const \hyperlink{structoption_1_1Descriptor}{option\+::\+Descriptor} usage\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+  \{UNKNOWN,   0,   \textcolor{stringliteral}{""},    \textcolor{stringliteral}{""},            \hyperlink{structoption_1_1Arg_a7fc01987899c91c6b6a1be5711a46e22}{option::Arg::None},          \textcolor{stringliteral}{"Usage: PolyCrack
+       [mode] [options] \(\backslash\)n\(\backslash\)nOptions:"}\},
+  \{HELP,      0,   \textcolor{stringliteral}{"h"},   \textcolor{stringliteral}{"help"},         \hyperlink{structoption_1_1Arg_a7fc01987899c91c6b6a1be5711a46e22}{option::Arg::None},          \textcolor{stringliteral}{" --help \(\backslash\)tPrint
+       usage and exit."}\},
+
+  \{MODE,ENCRYPT,  \textcolor{stringliteral}{"e"},  \textcolor{stringliteral}{"encrypt"},      Arg::NonEmpty,  \textcolor{stringliteral}{" -e --encrypt [key] \(\backslash\)tEncrypt file using specified
+       key."}\},
+  \{MODE,DECRYPT,  \textcolor{stringliteral}{"d"},  \textcolor{stringliteral}{"decrypt"},      Arg::NonEmpty,  \textcolor{stringliteral}{" -d --decrypt [key] \(\backslash\)tDecrypt file using specified
+       key."}\},
+  \{MODE,  FANAL,  \textcolor{stringliteral}{"f"},  \textcolor{stringliteral}{"freidmann"},    \hyperlink{structoption_1_1Arg_a7fc01987899c91c6b6a1be5711a46e22}{option::Arg::None},          \textcolor{stringliteral}{" -f --friedmann
+       [lower limit] [upper limit]\(\backslash\)n \(\backslash\)tPerform friedmann analysis to guess key length.\(\backslash\)n\(\backslash\)t-f quick, -ff accurate."}\},
+  \{MODE,  KANAL,  \textcolor{stringliteral}{"k"},  \textcolor{stringliteral}{"kasiski"},      \hyperlink{structoption_1_1Arg_a7fc01987899c91c6b6a1be5711a46e22}{option::Arg::None},          \textcolor{stringliteral}{" -k --kasiski \(\backslash\)t
+      Perform kasiski examination to guess key length."}\},
+  \{MODE,  KELIM,  \textcolor{stringliteral}{"E"},  \textcolor{stringliteral}{"key-elimination"}, \hyperlink{structoption_1_1Arg_a7fc01987899c91c6b6a1be5711a46e22}{option::Arg::None},       \textcolor{stringliteral}{" -E --key-elimination
+       [] \(\backslash\)tSubtracts the ciphertext from itself offset by key length."}\},
+  \{MODE,  FQANAL, \textcolor{stringliteral}{"F"},  \textcolor{stringliteral}{"frequency-analysis"}, Arg::NonEmpty,    \textcolor{stringliteral}{" -F --frequency-analysis [Ref Freqs] \(\backslash\)t
+      Compares infile frequencies to [Ref Freqs]\(\backslash\)n \(\backslash\)tRef Freqs is a csv of the letter frequencies for a language."}\},
+
+  \{FILEIN,    0,  \textcolor{stringliteral}{"i"},  \textcolor{stringliteral}{"input-file"},   Arg::NonEmpty, \textcolor{stringliteral}{" -i --input-file [filename] \(\backslash\)tRequired for some
+       oprations."}\},
+  \{FILEOUT,   0,  \textcolor{stringliteral}{"o"},  \textcolor{stringliteral}{"output-file"},  Arg::NonEmpty, \textcolor{stringliteral}{" -o --output-file [filename] \(\backslash\)tRequired for some
+       oprations."}\},
+  \{KEYLEN,    0,  \textcolor{stringliteral}{"s"},  \textcolor{stringliteral}{"key-size"},     Arg::Numeric, \textcolor{stringliteral}{" -s --key-size \(\backslash\)tSpecifiy the size of the key to use
+       when performing frequency analysis or brutforing"}\},
+  \{DICT,      0,  \textcolor{stringliteral}{"w"},  \textcolor{stringliteral}{"word-list"},    Arg::NonEmpty, \textcolor{stringliteral}{" -w --word-list [file] \(\backslash\)tSpecify a word list to use
+       when bruteforcing."}\},
+  \{CRIB,      0,  \textcolor{stringliteral}{"c"},  \textcolor{stringliteral}{"crib"},         Arg::NonEmpty,  \textcolor{stringliteral}{" -c --crib \(\backslash\)tProvide a crib to improve analysis
+       and to verify a brute force attack."}\},
+
+  \{0,0,0,0,0,0\} 
+\}
+\end{DoxyCode}

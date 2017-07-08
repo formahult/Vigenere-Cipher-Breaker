@@ -1,0 +1,106 @@
+\hypertarget{classVigenere}{}\section{Vigenere Class Reference}
+\label{classVigenere}\index{Vigenere@{Vigenere}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classVigenere_a3196a2902aa64dde58b84c76a4fb351d}{Vigenere} (string)
+\item 
+string \hyperlink{classVigenere_a5b73ebb7eed8709e608da556ec3633fa}{decrypt} (string)
+\item 
+string \hyperlink{classVigenere_ae41574ecb94277c69204a8937a061b15}{encrypt} (string)
+\item 
+void \hyperlink{classVigenere_ac0ee004df7b389284c9aaa90c7dbcf76}{encrypt\+File} (string, string=\char`\"{}crypt.\+vig\char`\"{})
+\item 
+void \hyperlink{classVigenere_ad5a357194e5b113037f56adc0602f0b3}{decrypt\+File} (string, string=\char`\"{}plain.\+txt\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classVigenere_a3196a2902aa64dde58b84c76a4fb351d}\label{classVigenere_a3196a2902aa64dde58b84c76a4fb351d}} 
+\index{Vigenere@{Vigenere}!Vigenere@{Vigenere}}
+\index{Vigenere@{Vigenere}!Vigenere@{Vigenere}}
+\subsubsection{\texorpdfstring{Vigenere()}{Vigenere()}}
+{\footnotesize\ttfamily Vigenere\+::\+Vigenere (\begin{DoxyParamCaption}\item[{string}]{key }\end{DoxyParamCaption})}
+
+Constructor to create an en/decrypting object
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & string to use as a key \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classVigenere_a5b73ebb7eed8709e608da556ec3633fa}\label{classVigenere_a5b73ebb7eed8709e608da556ec3633fa}} 
+\index{Vigenere@{Vigenere}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!Vigenere@{Vigenere}}
+\subsubsection{\texorpdfstring{decrypt()}{decrypt()}}
+{\footnotesize\ttfamily string Vigenere\+::decrypt (\begin{DoxyParamCaption}\item[{string}]{text }\end{DoxyParamCaption})}
+
+Currently cannot recover any non a-\/z$\vert$\+A-\/Z and forces to a single case
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & decrypts a cipher string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+decrypted text 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVigenere_ad5a357194e5b113037f56adc0602f0b3}\label{classVigenere_ad5a357194e5b113037f56adc0602f0b3}} 
+\index{Vigenere@{Vigenere}!decrypt\+File@{decrypt\+File}}
+\index{decrypt\+File@{decrypt\+File}!Vigenere@{Vigenere}}
+\subsubsection{\texorpdfstring{decrypt\+File()}{decryptFile()}}
+{\footnotesize\ttfamily void Vigenere\+::decrypt\+File (\begin{DoxyParamCaption}\item[{string}]{file,  }\item[{string}]{out = {\ttfamily \char`\"{}plain.txt\char`\"{}} }\end{DoxyParamCaption})}
+
+performs decryption on a single text file. All non a-\/z$\vert$\+A-\/Z is stripped.
+
+key is reset so later calls are not affected by earlier calls.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Name of file to decrypt \\
+\hline
+{\em out} & optional name of output file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVigenere_ae41574ecb94277c69204a8937a061b15}\label{classVigenere_ae41574ecb94277c69204a8937a061b15}} 
+\index{Vigenere@{Vigenere}!encrypt@{encrypt}}
+\index{encrypt@{encrypt}!Vigenere@{Vigenere}}
+\subsubsection{\texorpdfstring{encrypt()}{encrypt()}}
+{\footnotesize\ttfamily string Vigenere\+::encrypt (\begin{DoxyParamCaption}\item[{string}]{text }\end{DoxyParamCaption})}
+
+Currently strips any non a-\/z$\vert$\+A-\/Z and forces to a single case
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & encrypts a plaintext string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+encrypted text 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVigenere_ac0ee004df7b389284c9aaa90c7dbcf76}\label{classVigenere_ac0ee004df7b389284c9aaa90c7dbcf76}} 
+\index{Vigenere@{Vigenere}!encrypt\+File@{encrypt\+File}}
+\index{encrypt\+File@{encrypt\+File}!Vigenere@{Vigenere}}
+\subsubsection{\texorpdfstring{encrypt\+File()}{encryptFile()}}
+{\footnotesize\ttfamily void Vigenere\+::encrypt\+File (\begin{DoxyParamCaption}\item[{string}]{file,  }\item[{string}]{out = {\ttfamily \char`\"{}crypt.vig\char`\"{}} }\end{DoxyParamCaption})}
+
+performs encryption on a single text file. All non a-\/z$\vert$\+A-\/Z is stripped.
+
+key is reset so later calls are not affected by earlier calls.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Name of file to encrypt \\
+\hline
+{\em out} & optional name of output file \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\hyperlink{Vigenere_8hpp}{Vigenere.\+hpp}\item 
+sources/\hyperlink{Vigenere_8cpp}{Vigenere.\+cpp}\end{DoxyCompactItemize}

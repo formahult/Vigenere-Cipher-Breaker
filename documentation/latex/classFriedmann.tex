@@ -1,0 +1,123 @@
+\hypertarget{classFriedmann}{}\section{Friedmann Class Reference}
+\label{classFriedmann}\index{Friedmann@{Friedmann}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFriedmann_af564cf33edad401565a3ac01cab6b117}{Friedmann} (string)
+\item 
+map$<$ int, double $>$ \hyperlink{classFriedmann_ad8b6d559d8beb795a45d95601039dc05}{get\+Key\+I\+Cs} (int=1, int=25)
+\item 
+int \hyperlink{classFriedmann_a4b63925a80957b0263c78cfcd91fb362}{guess\+Key\+Length} (int=1, int=25)
+\item 
+int \hyperlink{classFriedmann_a638777d8e78a6101c69e61208086d1bf}{quick\+Guess\+Key\+Length} ()
+\item 
+\mbox{\Hypertarget{classFriedmann_a80ff9c00de8d6efd9e00ce3f830cfb61}\label{classFriedmann_a80ff9c00de8d6efd9e00ce3f830cfb61}} 
+double {\bfseries get\+IC} (string)
+\item 
+void \hyperlink{classFriedmann_ad03460df53d45df8c937703ce02af949}{print\+Key\+I\+Cs} (int=1, int=25)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classFriedmann}{Friedmann} \hyperlink{classFriedmann_ad096c7c2b3e83b56a55cd119f220c73d}{Friedmann\+From\+File} (string)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFriedmann_af564cf33edad401565a3ac01cab6b117}\label{classFriedmann_af564cf33edad401565a3ac01cab6b117}} 
+\index{Friedmann@{Friedmann}!Friedmann@{Friedmann}}
+\index{Friedmann@{Friedmann}!Friedmann@{Friedmann}}
+\subsubsection{\texorpdfstring{Friedmann()}{Friedmann()}}
+{\footnotesize\ttfamily Friedmann\+::\+Friedmann (\begin{DoxyParamCaption}\item[{string}]{S }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em S} & Cipher text as a single string. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classFriedmann_ad096c7c2b3e83b56a55cd119f220c73d}\label{classFriedmann_ad096c7c2b3e83b56a55cd119f220c73d}} 
+\index{Friedmann@{Friedmann}!Friedmann\+From\+File@{Friedmann\+From\+File}}
+\index{Friedmann\+From\+File@{Friedmann\+From\+File}!Friedmann@{Friedmann}}
+\subsubsection{\texorpdfstring{Friedmann\+From\+File()}{FriedmannFromFile()}}
+{\footnotesize\ttfamily \hyperlink{classFriedmann}{Friedmann} Friedmann\+::\+Friedmann\+From\+File (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Named constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & U\+RI of a file containing the cipher text \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFriedmann_ad8b6d559d8beb795a45d95601039dc05}\label{classFriedmann_ad8b6d559d8beb795a45d95601039dc05}} 
+\index{Friedmann@{Friedmann}!get\+Key\+I\+Cs@{get\+Key\+I\+Cs}}
+\index{get\+Key\+I\+Cs@{get\+Key\+I\+Cs}!Friedmann@{Friedmann}}
+\subsubsection{\texorpdfstring{get\+Key\+I\+Cs()}{getKeyICs()}}
+{\footnotesize\ttfamily map$<$ int, double $>$ Friedmann\+::get\+Key\+I\+Cs (\begin{DoxyParamCaption}\item[{int}]{r\+Lo = {\ttfamily 1},  }\item[{int}]{r\+Hi = {\ttfamily 25} }\end{DoxyParamCaption})}
+
+Calculates the average IC for different key lengths.
+
+
+\begin{DoxyParams}{Parameters}
+{\em r\+Lo} & lower possible key size bound default=1 \\
+\hline
+{\em r\+Hi} & upper possible key size bound default=25 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Map$<$int, double$>$ of the calculated key lengths and I\+Cs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFriedmann_a4b63925a80957b0263c78cfcd91fb362}\label{classFriedmann_a4b63925a80957b0263c78cfcd91fb362}} 
+\index{Friedmann@{Friedmann}!guess\+Key\+Length@{guess\+Key\+Length}}
+\index{guess\+Key\+Length@{guess\+Key\+Length}!Friedmann@{Friedmann}}
+\subsubsection{\texorpdfstring{guess\+Key\+Length()}{guessKeyLength()}}
+{\footnotesize\ttfamily int Friedmann\+::guess\+Key\+Length (\begin{DoxyParamCaption}\item[{int}]{r\+Lo = {\ttfamily 1},  }\item[{int}]{r\+Hi = {\ttfamily 25} }\end{DoxyParamCaption})}
+
+Tries multiple key lengths and chooses the key length which maximises the index of co-\/incidence (IC).
+
+
+\begin{DoxyParams}{Parameters}
+{\em r\+Lo} & lower possible key size bound default=1 \\
+\hline
+{\em r\+Hi} & upper possible key size bound default=25 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return the key length which maximises index of co-\/incidence 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFriedmann_ad03460df53d45df8c937703ce02af949}\label{classFriedmann_ad03460df53d45df8c937703ce02af949}} 
+\index{Friedmann@{Friedmann}!print\+Key\+I\+Cs@{print\+Key\+I\+Cs}}
+\index{print\+Key\+I\+Cs@{print\+Key\+I\+Cs}!Friedmann@{Friedmann}}
+\subsubsection{\texorpdfstring{print\+Key\+I\+Cs()}{printKeyICs()}}
+{\footnotesize\ttfamily void Friedmann\+::print\+Key\+I\+Cs (\begin{DoxyParamCaption}\item[{int}]{r\+Lo = {\ttfamily 1},  }\item[{int}]{r\+Hi = {\ttfamily 25} }\end{DoxyParamCaption})}
+
+Calcuates and outputs the I\+Cs for given key I\+Cs
+
+
+\begin{DoxyParams}{Parameters}
+{\em r\+Lo} & lower possible key size bound default=1 \\
+\hline
+{\em r\+Hi} & upper possible key size bound default=25 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFriedmann_a638777d8e78a6101c69e61208086d1bf}\label{classFriedmann_a638777d8e78a6101c69e61208086d1bf}} 
+\index{Friedmann@{Friedmann}!quick\+Guess\+Key\+Length@{quick\+Guess\+Key\+Length}}
+\index{quick\+Guess\+Key\+Length@{quick\+Guess\+Key\+Length}!Friedmann@{Friedmann}}
+\subsubsection{\texorpdfstring{quick\+Guess\+Key\+Length()}{quickGuessKeyLength()}}
+{\footnotesize\ttfamily int Friedmann\+::quick\+Guess\+Key\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A method of guessing the key length that requires only one pass. Less effective, but much faster.
+
+\begin{DoxyReturn}{Returns}
+returns the estimated key length 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\hyperlink{KeyAnalyser_8hpp}{Key\+Analyser.\+hpp}\item 
+sources/\hyperlink{KeyAnalyser_8cpp}{Key\+Analyser.\+cpp}\end{DoxyCompactItemize}
